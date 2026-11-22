@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0c0e" />
+  <meta name="description" content="A developer learning journal covering frontend, backend, databases and cybersecurity." />
+  <title>Learning Journal — Developer Portfolio</title>
+  <link rel="icon" href="assets//benedict.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="learning">
+<div class="mobile-bar">
+    <a class="mobile-brand" href="index.html#home" aria-label="Portfolio home"><span class="mobile-brandmark"><img class="site-icon-image" src="assets/branding/bendev.png" alt="" width="38" height="38"/><span class="site-icon-fallback" aria-hidden="true">&lt;/&gt;</span></span> Bed Dev<span class="mobile-brand-muted">.dev</span></a>
+    <div class="mobile-actions"><button type="button" class="theme-toggle theme-toggle-mobile" aria-label="Switch color theme" title="Toggle light and dark mode"><span class="theme-icon" aria-hidden="true">☼</span></button><button id="sidebarToggle" type="button" class="sidebar-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="siteSidebar"><span aria-hidden="true">☰</span></button></div>
+  </div>
+  <div class="sidebar-scrim" id="sidebarScrim" aria-hidden="true"></div>
+  <aside class="site-sidebar" id="siteSidebar" aria-label="Website navigation">
+    <div class="sidebar-head"><a href="index.html#home" class="sidebar-brand"><span class="sidebar-brandmark"><img class="site-icon-image" src="assets/branding/bendev.png" alt="" width="38" height="38"/><span class="site-icon-fallback" aria-hidden="true">&lt;/&gt;</span></span><span> Ben Dev<small>Developer portfolio</small></span></a></div>
+    <div class="sidebar-caption">NAVIGATION</div>
+    <nav class="sidebar-nav" aria-label="Portfolio sections"><a href="index.html#home" class="side-link" data-section="home"><span class="side-icon" aria-hidden="true">⌂</span><span>Overview</span></a>
+<a href="index.html#projects" class="side-link" data-section="projects"><span class="side-icon" aria-hidden="true">▣</span><span>Projects</span></a>
+<a href="index.html#stack" class="side-link" data-section="stack"><span class="side-icon" aria-hidden="true">⬡</span><span>Tech Stack</span></a>
+<a href="index.html#about" class="side-link" data-section="about"><span class="side-icon" aria-hidden="true">◇</span><span>Dev Details</span></a>
+<a href="index.html#architecture" class="side-link" data-section="architecture"><span class="side-icon" aria-hidden="true">▥</span><span>Architecture</span></a>
+<a href="index.html#credentials" class="side-link" data-section="credentials"><span class="side-icon" aria-hidden="true">✧</span><span>Credentials</span></a>
+<a href="index.html#testimonials" class="side-link" data-section="testimonials"><span class="side-icon" aria-hidden="true">❝</span><span>Testimonials</span></a>
+<a href="index.html#contact" class="side-link" data-section="contact"><span class="side-icon" aria-hidden="true">✉</span><span>Contact</span></a></nav>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-caption">PERSONAL DEVELOPMENT</div>
+    <nav class="sidebar-nav" aria-label="Learning pages"><a class="side-link learning-link is-current" href="learning.html" data-section="learning"><span class="side-icon" aria-hidden="true">◈</span><span>Learning Journal</span><span class="sidebar-arrow" aria-hidden="true">↗</span></a></nav>
+    <div class="sidebar-bottom"><button class="theme-toggle theme-toggle-desktop" type="button" aria-label="Switch color theme" title="Toggle light and dark mode"><span class="theme-icon" aria-hidden="true">☼</span><span class="theme-toggle-label">Light mode</span><span class="sidebar-arrow" aria-hidden="true">↔</span></button><div class="sidebar-footnote">Built with curiosity.<br/>Always learning, always building.</div></div>
+  </aside>
+<main class="learning-main">
+  <section class="learning-hero" id="learning">
+    <div class="shell">
+      <div class="learning-kicker"><span class="status-blip"></span> NOTES FROM THE BUILD PROCESS</div>
+      <div class="learning-title-layout">
+        <div><h1>Currently <span>learning.</span></h1><p>Learning is part of the work. This journal collects the tools, concepts, and techniques I am exploring across development and security.</p></div>
+        <div class="learning-hero-mark" aria-hidden="true">&lt; <span>/</span> &gt;</div>
+      </div>
+      <div class="learning-hero-footer"><span>LEARNING ROADMAP / FOUR DISCIPLINES</span><a href="index.html#projects">SEE MY PROJECTS <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </section>
+  <section class="content learning-content" aria-labelledby="learningTopicsTitle">
+    <div class="shell">
+      <div class="section-heading"><div><div class="section-kicker">MY STUDY NOTES</div><h2 class="section-title" id="learningTopicsTitle">Skills in progress.</h2></div><p class="section-lead">An editable roadmap. The entries shown are examples; change them to reflect what you are actually studying.</p></div>
+      <div class="learning-filter-row"><span>SHOW TOPICS</span><div class="learning-filters" id="learningFilters" aria-label="Filter topics by learning status"><button type="button" class="learning-filter is-active" data-filter="all" aria-pressed="true">All</button><button type="button" class="learning-filter" data-filter="Learning" aria-pressed="false">Learning</button><button type="button" class="learning-filter" data-filter="Practicing" aria-pressed="false">Practicing</button><button type="button" class="learning-filter" data-filter="Planned" aria-pressed="false">Planned</button></div></div>
+      <div class="learning-grid" id="learningGrid" aria-live="polite"></div>
+      <p class="learning-footnote">* All example entries are editable in <code>script.js</code>. Add more topics or sections without changing the HTML.</p>
+    </div>
+  </section>
+  <section class="learning-callout"><div class="shell"><div class="learning-callout-inner"><div><div class="section-kicker">FROM STUDY TO SHIPPING</div><h2>Learning by building.</h2><p>Explore practical work, experiments and the systems behind them.</p></div><a class="btn btn-primary" href="index.html#projects">Explore projects <span aria-hidden="true">↗</span></a></div></div></section>
+</main>
+<footer><div class="shell footer-inner"><div><strong>YOURNAME<span class="footer-period">.</span></strong><br/><small>© <span id="year">2026</span> Your Name. Designed with intention.</small></div><div class="footer-links"><a href="index.html#home">Home</a><a href="index.html#contact">Contact</a></div></div></footer>
+<script src="script.js" defer></script>
+</body>
+</html>

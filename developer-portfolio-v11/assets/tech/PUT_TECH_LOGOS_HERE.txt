@@ -1,0 +1,3 @@
+Put any optional technology logos here and reference them using the "logo" property.
+Example: {"name":"React", "logo":"assets/tech/react.svg"}
+If no icon or logo is provided, an automatic initials icon is used.

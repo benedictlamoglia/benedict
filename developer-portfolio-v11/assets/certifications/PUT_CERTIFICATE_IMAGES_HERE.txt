@@ -1,0 +1,3 @@
+Place your JPEG, PNG, WEBP, or SVG certificate files in this folder.
+Then edit index.html -> portfolioContent -> certifications -> image.
+Example: "image": "assets/certifications/javascript-certificate.jpg"

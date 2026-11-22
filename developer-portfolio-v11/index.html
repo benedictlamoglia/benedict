@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0c0e" />
+  <meta name="description" content="A minimalist, monochrome developer portfolio design prototype." />
+  <title>Benedict Dev</title>
+  <link rel="icon" href="assets/benedict.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="home">
+  <!-- Offline SVG tech marks: monochrome, deliberately simplified for the portfolio -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="tech-html" viewBox="0 0 24 24">
+      <path d="M4.3 2.5h15.4L18.3 19l-6.3 2.5L5.7 19z" fill="none" stroke="currentColor" stroke-width="1.7"
+        stroke-linejoin="round" /><text x="12" y="16.9" font-size="13" font-weight="800" font-family="Arial,sans-serif"
+        fill="currentColor" text-anchor="middle">5</text>
+    </symbol>
+    <symbol id="tech-css" viewBox="0 0 24 24">
+      <path d="M4.3 2.5h15.4L18.3 19l-6.3 2.5L5.7 19z" fill="none" stroke="currentColor" stroke-width="1.7"
+        stroke-linejoin="round" /><text x="12" y="16.9" font-size="13" font-weight="800" font-family="Arial,sans-serif"
+        fill="currentColor" text-anchor="middle">3</text>
+    </symbol>
+    <symbol id="tech-javascript" viewBox="0 0 24 24">
+      <rect x="2.5" y="2.5" width="19" height="19" rx="3" fill="currentColor" /><text x="12" y="16.3" font-size="10"
+        font-weight="900" font-family="Arial,sans-serif" fill="#17191c" text-anchor="middle">JS</text>
+    </symbol>
+    <symbol id="tech-responsive" viewBox="0 0 24 24">
+      <rect x="2" y="4" width="15" height="11" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.7" />
+      <path d="M5 19h8m-4-4v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+      <rect x="16.5" y="9" width="5.5" height="11" rx="1.2" fill="#17191c" stroke="currentColor" stroke-width="1.7" />
+    </symbol>
+    <symbol id="tech-node" viewBox="0 0 24 24">
+      <path d="m12 1.8 9 5.1v10.2l-9 5.1-9-5.1V6.9z" stroke="currentColor" stroke-width="1.7" fill="none"
+        stroke-linejoin="round" /><text x="12" y="16.1" font-family="Arial,sans-serif" font-size="12" font-weight="800"
+        text-anchor="middle" fill="currentColor">N</text>
+    </symbol>
+    <symbol id="tech-express" viewBox="0 0 24 24"><text x="12" y="16.5" font-size="12" font-family="Arial,sans-serif"
+        font-weight="700" text-anchor="middle" fill="currentColor">ex</text>
+      <path d="M3 19.5h18" stroke="currentColor" stroke-width="1.2" />
+    </symbol>
+    <symbol id="tech-rest" viewBox="0 0 24 24">
+      <path d="m8 6-5 6 5 6m8-12 5 6-5 6m-3-15-2 18" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="tech-postgres" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="5.2" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="1.7" />
+      <path d="M4 5.3v12c0 1.7 3.6 3.1 8 3.1s8-1.4 8-3.1v-12M4 11c0 1.7 3.6 3.1 8 3.1s8-1.4 8-3.1" fill="none"
+        stroke="currentColor" stroke-width="1.7" />
+    </symbol>
+    <symbol id="tech-supabase" viewBox="0 0 24 24">
+      <path d="M13.2 2.1 3.5 14a1.5 1.5 0 0 0 1.2 2.5h6.3L9.8 22l10.7-12.9A1.5 1.5 0 0 0 19.3 6H13z" fill="none"
+        stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="tech-auth" viewBox="0 0 24 24">
+      <rect x="4.5" y="10" width="15" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.7" />
+      <path d="M8 10V7a4 4 0 1 1 8 0v3" stroke="currentColor" stroke-width="1.7" fill="none" />
+      <circle cx="12" cy="15.3" r="1.3" fill="currentColor" />
+    </symbol>
+    <symbol id="tech-git" viewBox="0 0 24 24">
+      <path d="m12 1.8 10.2 10.2L12 22.2 1.8 12z" fill="none" stroke="currentColor" stroke-width="1.7" />
+      <path d="M9 8.5v7m0-5 5 5V8.4" fill="none" stroke="currentColor" stroke-width="1.6" />
+      <circle cx="9" cy="8" r="1.5" fill="currentColor" />
+      <circle cx="9" cy="16" r="1.5" fill="currentColor" />
+      <circle cx="14" cy="8" r="1.5" fill="currentColor" />
+    </symbol>
+    <symbol id="tech-github" viewBox="0 0 24 24">
+      <path
+        d="M6.5 8.8 6 4.1l4 2.5a10 10 0 0 1 4 0l4-2.5-.5 4.7a7 7 0 0 1 2.2 5.2c0 3.9-3.4 6.7-7.7 6.7S4.3 17.9 4.3 14c0-2.1.8-3.8 2.2-5.2Z"
+        stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round" />
+      <path d="M9 13h.1m5.8 0h.1m-4 3c.7.6 1.4.6 2.1 0" stroke="currentColor" stroke-width="1.7"
+        stroke-linecap="round" />
+    </symbol>
+    <symbol id="tech-vercel" viewBox="0 0 24 24">
+      <path d="M12 2.8 22 20.5H2z" fill="currentColor" />
+    </symbol>
+    <symbol id="tech-render" viewBox="0 0 24 24">
+      <circle cx="6" cy="6" r="3" fill="currentColor" />
+      <path d="M12 3h9v4h-9zM3 12h18v4H3zM3 19h12v3H3z" fill="currentColor" />
+    </symbol>
+  </svg>
+  <div class="mobile-bar">
+    <a class="mobile-brand" href="index.html#home" aria-label="Portfolio home"><span class="mobile-brandmark"><img
+          class="site-icon-image" data-site-icon src="assets/branding/site-icon.svg" alt="" width="38"
+          height="38" /><span class="site-icon-fallback" aria-hidden="true">&lt;/&gt;</span></span>Ben Dev<span
+        class="mobile-brand-muted">.dev</span></a>
+    <div class="mobile-actions"><button type="button" class="theme-toggle theme-toggle-mobile"
+        aria-label="Switch color theme" title="Toggle light and dark mode"><span class="theme-icon"
+          aria-hidden="true">☼</span></button><button id="sidebarToggle" type="button" class="sidebar-toggle"
+        aria-label="Open navigation" aria-expanded="false" aria-controls="siteSidebar"><span
+          aria-hidden="true">☰</span></button></div>
+  </div>
+  <div class="sidebar-scrim" id="sidebarScrim" aria-hidden="true"></div>
+  <aside class="site-sidebar" id="siteSidebar" aria-label="Website navigation">
+    <div class="sidebar-head"><a href="index.html#home" class="sidebar-brand"><span class="sidebar-brandmark"><img
+            class="site-icon-image" src="assets/branding/bendev.png" alt="" width="38" height="38" /><span
+            class="site-icon-fallback" aria-hidden="true">&lt;/&gt;</span></span><span>Ben Dev<small>Developer
+            portfolio</small></span></a></div>
+    <div class="sidebar-caption">NAVIGATION</div>
+    <nav class="sidebar-nav" aria-label="Portfolio sections"><a href="#home" class="side-link" data-section="home"><span
+          class="side-icon" aria-hidden="true">⌂</span><span>Overview</span></a>
+      <a href="#projects" class="side-link" data-section="projects"><span class="side-icon"
+          aria-hidden="true">▣</span><span>Projects</span></a>
+      <a href="#stack" class="side-link" data-section="stack"><span class="side-icon"
+          aria-hidden="true">⬡</span><span>Tech Stack</span></a>
+      <a href="#about" class="side-link" data-section="about"><span class="side-icon"
+          aria-hidden="true">◇</span><span>Dev Details</span></a>
+      <a href="#architecture" class="side-link" data-section="architecture"><span class="side-icon"
+          aria-hidden="true">▥</span><span>Architecture</span></a>
+      <a href="#credentials" class="side-link" data-section="credentials"><span class="side-icon"
+          aria-hidden="true">✧</span><span>Credentials</span></a>
+      <a href="#testimonials" class="side-link" data-section="testimonials"><span class="side-icon"
+          aria-hidden="true">❝</span><span>Testimonials</span></a>
+      <a href="#contact" class="side-link" data-section="contact"><span class="side-icon"
+          aria-hidden="true">✉</span><span>Contact</span></a>
+    </nav>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-caption">PERSONAL DEVELOPMENT</div>
+    <nav class="sidebar-nav" aria-label="Learning pages"><a class="side-link learning-link" href="learning.html"
+        data-section="learning"><span class="side-icon" aria-hidden="true">◈</span><span>Learning Journal</span><span
+          class="sidebar-arrow" aria-hidden="true">↗</span></a></nav>
+    <div class="sidebar-bottom"><button class="theme-toggle theme-toggle-desktop" type="button"
+        aria-label="Switch color theme" title="Toggle light and dark mode"><span class="theme-icon"
+          aria-hidden="true">☼</span><span class="theme-toggle-label">Light mode</span><span class="sidebar-arrow"
+          aria-hidden="true">↔</span></button>
+      <div class="sidebar-footnote">Built with curiosity.<br />Always learning, always building.</div>
+    </div>
+  </aside>
+  <main>
+    <section class="hero" id="home">
+      <div class="shell">
+        <div class="hero-copy">
+          <div class="eyebrow">FULL-STACK DEVELOPER / PORTFOLIO</div>
+          <h1>Building digital <span class="fade">experiences</span> that matter<span class="fade">.</span></h1>
+          <p class="intro">I design and develop clean, reliable web applications — from thoughtful interfaces to APIs,
+            databases, and production deployments.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="mini-stats">
+            <div><strong>Front-end</strong><span>UI / UX</span></div>
+            <div><strong>Back-end</strong><span>APIs / LOGIC</span></div>
+            <div><strong>Deployment</strong><span>CLOUD / DB</span></div>
+          </div>
+        </div>
+
+        <!-- PORTRAIT: Add your own image at assets/profile.jpg to replace the placeholder.
+             The portrait automatically appears when the image loads. -->
+        <aside class="hero-portrait" aria-label="Profile photo area">
+          <div class="portrait-aura" aria-hidden="true"></div>
+          <div class="portrait-stage" id="portraitStage">
+            <div class="portrait-orbit portrait-orbit-a" aria-hidden="true"></div>
+            <div class="portrait-orbit portrait-orbit-b" aria-hidden="true"></div>
+            <div class="portrait-tilt" id="portraitTilt">
+              <div class="portrait-frame" id="portraitFrame">
+                <div class="portrait-grid" aria-hidden="true"></div>
+                <div class="portrait-placeholder" aria-hidden="true">
+                  <svg class="portrait-silhouette" viewBox="0 0 340 420" focusable="false"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="silhouetteFill" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#7b8089" />
+                        <stop offset="60%" stop-color="#545962" />
+                        <stop offset="100%" stop-color="#383c43" />
+                      </linearGradient>
+                      <linearGradient id="silhouetteSoft" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#6c717a" />
+                        <stop offset="100%" stop-color="#30343a" />
+                      </linearGradient>
+                    </defs>
+                    <ellipse cx="170" cy="401" rx="145" ry="22" fill="#aeb3bb" opacity=".08" />
+                    <path d="M29 416c4-82 22-113 77-133 22-8 38-11 64-11s42 3 64 11c55 20 73 51 77 133Z"
+                      fill="url(#silhouetteFill)" />
+                    <path d="M133 262v38c0 25 74 25 74 0v-38" fill="#61656d" />
+                    <path d="M96 150c0-61 32-100 74-100s74 39 74 100v27c0 66-35 112-74 112s-74-46-74-112z"
+                      fill="url(#silhouetteFill)" />
+                    <path
+                      d="M94 161c-5-63 11-109 58-120 28-7 67 2 82 29 21 16 23 49 14 90-10-19-17-40-19-64-23 26-74 34-121 31-1 18-4 28-14 34z"
+                      fill="url(#silhouetteSoft)" />
+                    <path d="M87 175c-10-10-17 1-14 20 3 18 12 27 24 28m156-48c10-10 17 1 14 20-3 18-12 27-24 28"
+                      fill="#585d65" />
+                    <path d="M91 321c29 22 55 29 79 29s50-7 79-29" fill="none" stroke="#bec3ca" stroke-opacity=".13"
+                      stroke-width="2" />
+                  </svg>
+                  <span class="portrait-placeholder-caption"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="1.5" aria-hidden="true">
+                      <rect x="3" y="5" width="18" height="14" rx="2" />
+                      <circle cx="9" cy="10" r="2" />
+                      <path d="m5 17 5-5 3 3 3-4 3 6" />
+                    </svg><span>YOUR PHOTO HERE</span></span>
+                </div>
+                <img class="portrait-photo" id="portraitPhoto" src="assets/benedict.png"
+                  alt="Portrait of the portfolio owner" decoding="async" />
+                <div class="portrait-frame-light" aria-hidden="true"></div>
+                <span class="portrait-corner portrait-corner--tl" aria-hidden="true"></span>
+                <span class="portrait-corner portrait-corner--tr" aria-hidden="true"></span>
+                <span class="portrait-corner portrait-corner--bl" aria-hidden="true"></span>
+                <span class="portrait-corner portrait-corner--br" aria-hidden="true"></span>
+                <div class="portrait-top-label" aria-hidden="true"><span class="portrait-indicator"></span> </div>
+              </div>
+            </div><!-- /.portrait-tilt -->
+          </div><!-- /.portrait-stage -->
+          <div class="portrait-bottom-bar"><span class="portrait-dash" aria-hidden="true"></span><span> John Benedict Lamoglia</span><span class="portrait-plus" aria-hidden="true"></span></div>
+          <div class="social-panel" aria-label="Social media profiles">
+            <div class="social-panel-header"><span>CONNECT WITH ME</span><span class="social-panel-stroke"
+                aria-hidden="true"></span><span>↗</span></div>
+            <div class="social-list" id="socialLinks"></div>
+            <div id="cvDownloadSlot" class="cv-download-slot" aria-label="Curriculum vitae download"></div>
+        </aside>
+      </div>
+    </section>
+    <div class="strip">
+      <div class="shell"><small>Focused on real-world systems</small><em>WEB APPLICATIONS</em><em>REST APIS</em><em>DATA
+          SYSTEMS</em><em>DEPLOYMENT</em></div>
+    </div>
+    <section class="content" id="projects">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">SELECTED WORK</div>
+            <h2 class="section-title">Projects with purpose.</h2>
+          </div>
+        </div>
+        <div class="project-grid" id="projectsGrid" aria-label="Portfolio projects"></div>
+      </div>
+    </section>
+    <dialog class="project-dialog" id="projectDialog" aria-labelledby="projectDialogTitle">
+      <div class="project-dialog-top"><strong id="projectDialogTitle">Project screenshot</strong><button type="button"
+          class="project-dialog-close" id="projectDialogClose" aria-label="Close project screenshot">✕</button></div>
+      <div class="project-dialog-image"><img id="projectDialogImage" alt="" /></div>
+    </dialog>
+    <section class="content" id="stack">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">TOOLKIT</div>
+            <h2 class="section-title">Tech stack.</h2>
+          </div>
+          <p class="section-lead">Technologies used to build complete experiences, from interfaces to infrastructure.
+          </p>
+        </div>
+        <div class="stack-box">
+          <div class="stack-intro">
+            <div aria-hidden="true" class="stack-scene">
+              <div class="stack-halo stack-halo-one"></div>
+              <div class="stack-halo stack-halo-two"></div>
+              <div class="stack-cube">
+                <span class="cube-face cube-front"><svg class="cube-glyph">
+                    <use href="#tech-javascript"></use>
+                  </svg></span>
+                <span class="cube-face cube-back"><svg class="cube-glyph">
+                    <use href="#tech-github"></use>
+                  </svg></span>
+                <span class="cube-face cube-right"><svg class="cube-glyph">
+                    <use href="#tech-node"></use>
+                  </svg></span>
+                <span class="cube-face cube-left"><svg class="cube-glyph">
+                    <use href="#tech-postgres"></use>
+                  </svg></span>
+                <span class="cube-face cube-top"><svg class="cube-glyph">
+                    <use href="#tech-html"></use>
+                  </svg></span>
+                <span class="cube-face cube-bottom"><svg class="cube-glyph">
+                    <use href="#tech-css"></use>
+                  </svg></span>
+              </div>
+              <span class="stack-stage-shadow"></span>
+            </div>
+            <div class="stack-intro-copy">
+              <span class="stack-eyebrow"><span class="stack-eyebrow-dot"></span> THE DEVELOPMENT TOOLKIT</span>
+              <h3>Built with the<br /><em>right tools.</em></h3>
+              <p>A modern stack for thoughtful interfaces, dependable backends, and everything in between.</p>
+            </div>
+          </div>
+          <div class="stack-list" id="stackList" aria-label="Technologies by category"></div>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="about">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">DEVELOPMENT DETAILS</div>
+            <h2 class="section-title">How I approach development.</h2>
+          </div>
+          <p class="section-lead">An overview of the engineering work behind a polished interface.</p>
+        </div>
+        <div class="details">
+          <article class="detail"><span class="num">DESIGN & BUILD</span>
+            <h3>Thoughtful interfaces</h3>
+            <p>Responsive layouts, consistent components, accessible interactions, and careful attention to details.</p>
+          </article>
+          <article class="detail"><span class="num">SYSTEMS & DATA</span>
+            <h3>Reliable back ends</h3>
+            <p>Organized API routes, request validation, server-side business logic, and structured data storage.</p>
+          </article>
+          <article class="detail"><span class="num">SHIPPING & SUPPORT</span>
+            <h3>Production mindset</h3>
+            <p>Environment configuration, deployment workflows, testing, error handling, and maintainable code.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="architecture">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">SYSTEM DESIGN</div>
+            <h2 class="section-title">Architecture, made clear.</h2>
+          </div>
+          <p class="section-lead">An example network flow for a full-stack app with a contact form and database.</p>
+        </div>
+        <div class="architecture">
+          <div class="diagram-header"><strong>FULL-STACK WEB APPLICATION — SAMPLE NETWORK MAP</strong><small>CONCEPT
+              DIAGRAM</small></div>
+          <div class="diagram-scroll"><svg viewBox="0 0 1100 330" role="img"
+              aria-label="Architecture diagram: user browser to Vercel front end to Render Node and Express API; API connects to Supabase database and email service; email service sends to personal inbox">
+              <defs>
+                <marker id="arr" markerWidth="8" markerHeight="8" refX="6.5" refY="3.5" orient="auto">
+                  <path d="M0 0 L7 3.5 L0 7" fill="none" stroke="#e4e6e9" stroke-width="1.5" />
+                </marker>
+              </defs>
+              <g stroke="#8f969e" stroke-width="1.5" fill="none" marker-end="url(#arr)">
+                <path d="M177 161 H248" />
+                <path d="M442 161 H520" />
+                <path d="M720 151 Q753 151 753 104 H799" />
+                <path d="M720 173 Q755 173 755 243 H799" />
+                <path d="M976 243 H1011" />
+              </g>
+              <g font-family="Consolas,monospace" fill="#9da4ac" font-size="11" text-anchor="middle"><text x="214"
+                  y="145">HTTPS</text><text x="478" y="145">JSON</text><text x="762" y="76">SQL</text><text x="758"
+                  y="220">API</text><text x="997" y="227">MAIL</text></g>
+              <g>
+                <rect x="18" y="116" width="159" height="90" rx="9" fill="#1f2226" stroke="#767b82" /><text x="97"
+                  y="145" text-anchor="middle" font-family="Consolas,monospace" font-size="10"
+                  fill="#9ea5ad">CLIENT</text><text x="97" y="171" text-anchor="middle" font-size="17" font-weight="650"
+                  fill="#f3f4f6">User Browser</text><text x="97" y="190" text-anchor="middle" font-size="11"
+                  fill="#9298a1">Desktop / Mobile</text>
+              </g>
+              <g>
+                <rect x="248" y="116" width="194" height="90" rx="9" fill="#24272b" stroke="#a1a6ad" /><text x="345"
+                  y="145" text-anchor="middle" font-family="Consolas,monospace" font-size="10" fill="#a7adb5">FRONT
+                  END</text><text x="345" y="171" text-anchor="middle" font-size="17" font-weight="650"
+                  fill="#f3f4f6">Web Interface</text><text x="345" y="190" text-anchor="middle" font-size="11"
+                  fill="#9298a1">Vercel Hosting</text>
+              </g>
+              <g>
+                <rect x="520" y="116" width="200" height="90" rx="9" fill="#2c3034" stroke="#e3e6e9" /><text x="620"
+                  y="145" text-anchor="middle" font-family="Consolas,monospace" font-size="10"
+                  fill="#c0c5cc">APPLICATION LAYER</text><text x="620" y="171" text-anchor="middle" font-size="17"
+                  font-weight="650" fill="#fff">Node / Express</text><text x="620" y="190" text-anchor="middle"
+                  font-size="11" fill="#abb1ba">API on Render</text>
+              </g>
+              <g>
+                <rect x="799" y="59" width="177" height="90" rx="9" fill="#1f2226" stroke="#777d85" /><text x="888"
+                  y="88" text-anchor="middle" font-family="Consolas,monospace" font-size="10"
+                  fill="#a7adb5">DATABASE</text><text x="888" y="114" text-anchor="middle" font-size="16"
+                  font-weight="650" fill="#f3f4f6">Supabase</text><text x="888" y="133" text-anchor="middle"
+                  font-size="11" fill="#9298a1">PostgreSQL</text>
+              </g>
+              <g>
+                <rect x="799" y="198" width="177" height="90" rx="9" fill="#1f2226" stroke="#777d85" /><text x="888"
+                  y="226" text-anchor="middle" font-family="Consolas,monospace" font-size="10" fill="#a7adb5">EMAIL
+                  DELIVERY</text><text x="888" y="250" text-anchor="middle" font-size="16" font-weight="650"
+                  fill="#f3f4f6">Email Provider</text><text x="888" y="269" text-anchor="middle" font-size="11"
+                  fill="#9298a1">Resend / Similar</text>
+              </g>
+              <g>
+                <rect x="1011" y="213" width="85" height="60" rx="9" fill="#25292c" stroke="#777d85" /><text x="1053"
+                  y="238" text-anchor="middle" font-size="12" font-weight="650" fill="#f3f4f6">Your</text><text x="1053"
+                  y="255" text-anchor="middle" font-size="12" font-weight="650" fill="#f3f4f6">Inbox</text>
+              </g>
+              <g font-family="Consolas,monospace" font-size="10" fill="#747b83"><text x="18" y="28">INTERNET /
+                  HTTPS</text><text x="18" y="314">CLIENT → HOSTED UI → API → DATA + EMAIL</text></g>
+            </svg></div>
+          <div class="diagram-footer"><span>Browser: submits form &amp; uses the app</span><span>API: validates and
+              processes data</span><span>Email provider: delivers inquiries</span></div>
+        </div>
+        <p class="diagram-note">This is a simplified conceptual architecture, not a live deployment. In production, the
+          API should keep credentials server-side, validate requests, apply rate limiting/spam protection, and send
+          email through an authenticated provider.</p>
+      </div>
+    </section>
+    <section class="content" id="credentials">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">BACKGROUND</div>
+            <h2 class="section-title">Education &amp; certifications.</h2>
+          </div>
+          <p class="section-lead">Education, completed courses, and credentials. Certificate images can be viewed full
+            size.</p>
+        </div>
+        <div class="credentials-layout">
+          <article class="resume-card education-card">
+            <h3>Education</h3>
+            <div class="resume-entry">
+              <div><strong>Your Degree / Program</strong>
+                <p>Your university or institution</p>
+                <p>Relevant coursework, capstone, or specialization</p>
+              </div><small>YEAR</small>
+            </div>
+            <div class="placeholder">Replace this sample entry with your actual education.</div>
+          </article>
+          <div class="certifications-panel">
+            <div class="credentials-panel-heading">
+              <div>
+                <h3>Certifications</h3>
+                <p>Credentials and practical learning</p>
+              </div><span id="certCount" aria-label="Certification count"></span>
+            </div>
+            <div class="certifications-grid" id="certificationsGrid" aria-label="Certificates gallery"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <dialog class="certificate-dialog" id="certificateDialog" aria-labelledby="certificateDialogTitle">
+      <div class="certificate-dialog-top"><strong id="certificateDialogTitle">Certificate preview</strong><button
+          type="button" class="certificate-close" id="certificateClose"
+          aria-label="Close certificate preview">✕</button></div>
+      <div class="certificate-dialog-image"><img id="certificateDialogImage" alt="" /></div>
+      <p id="certificateDialogSubtitle"></p>
+    </dialog>
+    <section class="content testimonials-section" id="testimonials">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">KIND WORDS</div>
+            <h2 class="section-title">What people say.</h2>
+          </div>
+        </div>
+        <div class="testimonial-gallery" aria-roledescription="carousel" aria-label="Testimonials">
+          <div class="testimonial-stage" id="testimonialStage" aria-live="off"></div>
+          <div class="testimonial-navigation">
+            <button type="button" class="testimonial-arrow" id="testimonialPrev"
+              aria-label="Previous testimonial">←</button>
+            <div class="testimonial-dots" id="testimonialDots" aria-label="Choose a testimonial"></div>
+            <button type="button" class="testimonial-arrow" id="testimonialNext"
+              aria-label="Next testimonial">→</button>
+          </div>
+          <p class="testimonial-count" id="testimonialCount" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="contact">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">CONTACT</div>
+            <h2 class="section-title">Have a project in mind?</h2>
+          </div>
+        </div>
+        <div class="contact-box">
+          <div>
+            <div class="eyebrow">LET'S BUILD SOMETHING</div>
+            <h3>Let's make<br />it happen<span class="hero-period">.</span></h3>
+            <p>Tell me what you're working on, what you need, and how I can help. I value clear communication and
+              practical solutions.</p>
+            <div class="contact-facts">
+              <div><span>EMAIL</span>johnbenedict.la@gmail.com</div>
+              <div><span>RESPONSE</span>Contact details</div>
+              <div><span>BASED IN</span>Philippines / Bacoor Cavite</div>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div><label for="contactName">Your name</label><input type="text" id="contactName" name="name"
+                placeholder="Enter your full name" autocomplete="name" maxlength="80" required /></div>
+            <div><label for="contactEmail">Email address</label><input type="email" id="contactEmail" name="email"
+                placeholder="name@example.com" autocomplete="email" maxlength="200" required /></div>
+            <div><label for="contactSubject">Subject</label><input type="text" id="contactSubject" name="subject"
+                placeholder="What would you like to discuss?" maxlength="140" required /></div>
+            <div><label for="contactMessage">Your message</label><textarea id="contactMessage" name="message" rows="4"
+                placeholder="Tell me about your project..." maxlength="4000" required></textarea></div><button
+              class="btn btn-primary" type="submit">Send message <span>↗</span></button>
+            <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+            <div class="form-note">Design preview only. This form does not send email until a secure email service is
+              configured.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="shell footer-inner">
+      <div><strong>YOURNAME<span class="footer-period">.</span></strong><br /><small>© <span id="year">2026</span> Your
+          Name. Designed with intention.</small></div>
+      <div class="footer-links"><a href="#home">Back to top ↑</a><a href="#projects">Projects</a><a
+          href="#contact">Contact</a></div>
+    </div>
+  </footer>
+  <!-- Edit portfolioContent in script.js to add projects, technologies, learning topics, certificates, and social links. -->
+  <script src="script.js" defer></script>
+</body>
+
+</html>

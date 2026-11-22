@@ -1,0 +1,2 @@
+Place a portrait named profile.jpg in this folder.
+Suggested portrait aspect ratio: 4:5.

@@ -1,0 +1,1 @@
+Place your real CV at assets/cv.pdf and set portfolioContent.cvFile = "assets/cv.pdf" in script.js.

@@ -1,0 +1,1 @@
+Put real screenshots of your projects here. Example: campuspass.png. Configure image: "assets/projects/campuspass.png" in script.js.
