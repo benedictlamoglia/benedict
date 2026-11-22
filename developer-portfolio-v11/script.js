@@ -7,7 +7,7 @@ const portfolioContent = {
   "siteIcon": "assets/branding/site-icon.svg",
   // Add your actual PDF to assets/cv.pdf and set this to "assets/cv.pdf".
   // The download button remains disabled when empty to prevent broken links.
-  "cvFile": "",
+  "cvFile": "assets/cv.pdf",
   "learning": [
     {"category":"Frontend","symbol":"◩","subtitle":"Interfaces & user experience","topics":[
       {"title":"Semantic HTML & accessibility","status":"Practicing","note":"Structure, forms, landmarks, keyboard support."},
