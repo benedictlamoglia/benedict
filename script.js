@@ -40,10 +40,10 @@ const portfolioContent = {
       "name": "CampusPass",
       "category": "FULL-STACK / SCHEDULING",
       "description": "An appointment scheduling experience with a guided enrollment flow, reference codes, and admin workflows.",
-      "role": "Your role / contribution",
-      "contribution": "Replace this text with the specific features YOU implemented, such as the form UI, API routes, reference-code logic, or database integration.",
-      "image": "",
-      "url": "",
+      "role": "Developer",
+      "contribution": "i am the full stack developer of this website using node,express",
+      "image": "./assets/projects/campuspass.png",
+      "url": "https://project-web-1-qq6z.onrender.com/",
       "tags": [
         "Node.js",
         "Express",
@@ -55,10 +55,10 @@ const portfolioContent = {
       "name": "Student Grade Calculator",
       "category": "WEB APPLICATION / EDUCATION",
       "description": "A responsive grade tool with weighted categories, instant recalculation, and easy-to-understand results.",
-      "role": "Your role / contribution",
-      "contribution": "Describe your personal work here, such as designing the interface, building the grade computation, fixing responsive behavior, or testing the application.",
-      "image": "",
-      "url": "",
+      "role": "Developer",
+      "contribution": "i am the one who build the full frontend of this website.",
+      "image": "./assets/projects/image.png",
+      "url": "https://stigradetracker.vercel.app/",
       "tags": [
         "HTML",
         "CSS",
@@ -192,20 +192,28 @@ const portfolioContent = {
   ],
   "certifications": [
     {
-      "title": "Certification title",
-      "issuer": "Issuing organization",
-      "year": "YEAR",
-      "image": "",
+      "title": "CODE FEST ANDROID APP DEVELOPMENT",
+      "issuer": "STI BACOOR",
+      "year": "2026",
+      "image": "./assets/certifications/codefest cert.jpg",
       "credentialUrl": "",
-      "description": "Add your certificate image and its verified details."
+      "description": ""
     },
     {
-      "title": "Training or course certificate",
-      "issuer": "Learning provider",
-      "year": "YEAR",
-      "image": "",
+      "title": "Java Beginners",
+      "issuer": "Simplilearn",
+      "year": "2026",
+      "image": "./assets/certifications/18A154A8-3DAE-4681-99F1-AFE51C91D483.png",
       "credentialUrl": "",
-      "description": "Replace this example with an actual qualification."
+      "description": ""
+    },
+    {
+      "title": "Javascript Essentials 1",
+      "issuer": "Cisco",
+      "year": "2026",
+      "image": "./assets/certifications/js cert.png",
+      "credentialUrl": "",
+      "description": ""
     }
   ]
 };
