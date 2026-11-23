@@ -99,7 +99,7 @@ const portfolioContent = {
     {
       "name": "TikTok",
       "logo": "assets/social/tiktok.svg",
-      "url": ""
+      "url": "https://www.tiktok.com/@benedict_lamoglia"
     },
     {
       "name": "GitHub",
@@ -109,7 +109,7 @@ const portfolioContent = {
     {
       "name": "LinkedIn",
       "logo": "assets/social/linkedin.svg",
-      "url": ""
+      "url": "https://www.linkedin.com/in/john-benedict-5179692b0/"
     }
   ],
   "techStack": [
